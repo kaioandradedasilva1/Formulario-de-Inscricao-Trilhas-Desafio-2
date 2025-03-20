@@ -1,0 +1,408 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    box-sizing: border-box;
+    background-color: #FEE7D6;
+    display: flex;
+    flex-direction: column;
+}
+
+header {
+    background-color:  rgb(21, 23, 45);
+    color: white;
+    margin: 1% 20%;
+    padding: 2% 6%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: "Poppins", sans-serif;
+    font-size: 1rem;
+    font-weight: 400;  
+    text-align: justify;
+}
+
+#logo-trilhas{
+    width: 40%;
+}
+
+#imagem-ilustrativa{
+    width: 30%;
+}
+
+.cabecalho{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.cabecalho_instrucoes{
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.cabecalho_instrucoes div {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+h1 {
+    margin: 3% 0 3% 0;
+    text-align: center;
+    font-size: 30px
+}
+
+main{
+    background-color: #FFFFFF;
+    color: #57534E;
+    margin: 0% 20%;
+    padding: 6%;
+    display: flex;
+    flex-direction: column;
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-size: 0.87rem;
+}
+
+.formulario{
+    display: flex;
+    flex-direction: column;
+    gap: 48px;
+}
+
+.botao_voltar {
+    display: flex;
+    align-items: center;    
+    text-decoration: none;
+    color: #57534E;
+}
+
+.botao_voltar img{
+    width: 24px;
+}
+
+.formulario_cabecalho{
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.formulario_cabecalho_descricao{
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+h2 {
+    font-weight: 600;
+    color: #292524;
+    font-size: 1rem;
+}
+
+.formulario_secao{
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.formulario_secao_titulo{
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.formulario_secao_preenchimento{
+    display: flex;
+    flex-direction: column;
+}
+
+.formulario_secao_preenchimento_endereco{
+    display: flex;
+    justify-content: space-between;
+    
+}
+
+.preenchimento_endereco_maior{
+    display: flex;
+    flex-direction: column;
+    width: 67%;
+}
+
+.preenchimento_endereco_menor{
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+}
+
+.preechimento_erro{
+    display: none;
+    padding: 1% 0%;
+    gap: 1%;
+    align-items: center;
+    color: red;
+    font-size: 0.75rem;
+}
+
+.preechimento_erro img{
+    width: 20px;
+}
+
+
+input, select{
+    border: 1px solid #D6D3D1;
+    border-radius: 8px;
+    padding: 12px 16px;
+    cursor:auto;
+}
+
+
+input:focus, select:focus {
+    background-color: #FEE7D6;
+    border: 2px ridge #F3541C;
+    outline: none;
+}
+
+input[type="file"] {
+    display: none;
+}
+
+.enviar_arquivo{
+    border: 1px dashed #D6D3D1;
+    border-radius: 8px;
+    height: 200px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    
+}
+
+.enviar_arquivo_selecionar{
+    display: flex;
+    padding: 24px 16px;
+    flex-direction: column;
+    align-items: center;
+    font-size: 1rem;
+    font-weight: 400;
+    text-align: center;
+    color: #A8A29E;
+}
+
+.enviar_arquivo_selecionado {
+    display: none;
+    padding: 24px 16px;
+    flex-direction: column;
+    align-items: center;
+    font-size: 1rem;
+    font-weight: 400;
+    text-align: center;
+    color: #A8A29E;
+}
+
+.nome_de_arquivo {
+    font-size: 14px;
+    color: #2135A6;
+    text-decoration: underline;
+
+}
+
+.menu_selecao_trilhas{
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.selecao_trilhas {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 16px;
+}
+
+.trilha {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 48%;
+    height: 120px;
+    border: 1px solid #D6D3D1;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.trilha input {
+    display: none;
+}
+
+input:hover, select:hover, .enviar_arquivo:hover, .trilha:hover, .termos_e_condicoes:hover{
+    background-color: #FEE7D6;
+}
+
+.conteudo {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.icone_trilha{
+    width: 40px;
+    height: 40px;
+}
+
+.trilha p {
+    font-family: "Montserrat", sans-serif;;
+    font-size: 1rem;
+    font-weight: 500;
+    color: #000000;
+}
+
+.icone_marcador{
+    border: 1px solid #D6D3D1;
+    border-radius: 50%;
+    width: 24px;
+    height: 24px;
+}
+
+.trilha input:checked + .conteudo{
+    border: 2px #F3541C;
+    width: 100%;
+    height: 100%;
+    border-radius: 8px;
+    border-style:solid;
+}
+
+.trilha input:checked + .conteudo .icone_marcador {
+    background-color: #F3541C;
+}
+
+.termos_e_condicoes{
+    display: flex;
+    justify-content: left;
+    flex-direction: row-reverse;
+    gap: 16px;
+    border: 1px solid #D6D3D1;
+    border-radius: 8px;
+    padding: 12px 16px;
+    font-size: 16px;
+}
+
+.link_termos{
+    text-decoration: none;
+    color: #F3541C;
+    font-weight: 500;
+}
+
+.botoes_confimacao_inscricao{
+    display: flex;
+    gap: 16px;
+    justify-content: end;
+}
+
+button{
+    height: 48px;
+    border: 1px solid #F3541C;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.botao_cancelar{
+    background-color: #ffffff;
+    color: #F3541C;
+    width: 123px;
+}
+
+.botao_inscricao{
+    background-color: #F3541C;
+    color: #FFFFFF;
+    width: 169px;
+}
+
+.botao_inscricao:hover{
+    background-color:#2135A6;
+    border: 2px;
+}
+
+.botao_cancelar:hover{
+    background-color: #FEE7D6;
+}
+
+footer{
+    background-color:  rgb(21, 23, 45);
+    margin: 1% 20%;
+    padding: 2%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    font-family: "Montserrat", sans-serif;
+    font-size: 0.87rem;
+    font-weight: 500;
+    color: white;
+}
+
+strong {
+    text-decoration:underline;
+}
+
+@media (max-width: 1000px ) {
+    header {
+        margin: 1% 1%;
+        padding: 2% 6%;
+    }
+
+    .cabecalho{
+        align-items: center;
+        font-size: 0.87rem;
+    }
+
+    #imagem-ilustrativa{
+        display: none;
+    }
+    
+    main{
+
+        margin: 0% 1%;
+        padding: 6%;
+    }
+
+    .formulario_secao_preenchimento_endereco{
+        flex-direction: column;
+        justify-content: space-between;
+        
+    }
+
+    .preenchimento_endereco_maior{
+        width: 100%;
+    }
+    
+    .preenchimento_endereco_menor{
+        width: 100%;
+    }
+
+    .selecao_trilhas {
+        flex-direction: column;
+        align-items: center;
+        gap: 16px;
+    }
+    
+    .trilha {
+        width: 100%;
+    }
+
+    footer{
+        margin: 1% 1%;
+        padding: 2%;   
+    }
+}
+
+

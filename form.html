@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="./assets/icone_trilhas.png">
+    <link rel="stylesheet" href="./styles/style_form.css">
+    <title>Formulário de Inscrição - Trilhas</title>
+</head>
+<body>
+    <header>
+        <img src="./assets/logo_trilhas_inova.png" alt="Logo do programa Trilhas Inova Maranhão" id="logo-trilhas">
+        <div class="cabecalho">
+            <h1> Formulário de Inscrição</h1>
+            <div class="cabecalho_instrucoes">
+                <div>
+                    <p>Antes de realizar sua inscrição, certifique-se que você atende aos requisitos e exigências mínimas expressas no edital para que possa ingressar ao programa.</p>
+                    <p>Leia e preencha o formulário com atenção. </p>
+                </div>
+                <img src="./assets/ilustracao_cabecalho.png" alt="Ilustração de um homem utilizando um notebook" id="imagem-ilustrativa">
+            </div>
+        </div>
+    </header>
+    <main>
+        <form class="formulario">
+            <section class="formulario_cabecalho" >
+                <a class="botao_voltar" href="index.html">
+                    <img src="./assets/icone_voltar.png" alt="Seta de voltar">
+                    <p>Voltar</p>
+                </a>
+                <div class="formulario_cabecalho_descricao">
+                    <h2>Formulário de inscrição</h2>
+                    <p>Preencha os dados abaixo para fazer sua inscrição no Programa Trilhas.</p> 
+                </div>
+            </section>
+            <section class="formulario_secao"> 
+                <p class="formulario_secao_titulo">Informações do participante</p>
+                <div class="formulario_secao_preenchimento">
+                    <label for="nome">Nome completo</label>
+                    <input name="nome" type="text" id="nome" placeholder="Ex.: Antônia Maria da Silva">
+                    <p class="preechimento_erro" id="erro-nome"><img src="./assets/icone_erro.png" alt="Ícone de Erro">Por favor, digite seu nome completo</p>
+                </div>
+                <div class="formulario_secao_preenchimento">
+                    <label for="data_nascimento">Data de nascimento</label>
+                    <input name="data_nascimento" type="date" id="data-nascimento">
+                    <p class="preechimento_erro" id="erro-data"><img src="./assets/icone_erro.png" alt="Ícone de Erro">Por favor, insira uma data válida</p>
+                </div>
+                <div class="formulario_secao_preenchimento">
+                    <label for="cpf">CPF</label>
+                    <input name="cpf" type="text" id="cpf" placeholder="000.000.000-00">
+                    <p class="preechimento_erro" id="erro-cpf"><img src="./assets/icone_erro.png" alt="Ícone de Erro">Por favor, insira um numero de CPF válido</p>
+                </div>
+                <div class="formulario_secao_preenchimento">
+                    <label for="sexo">Sexo</label>
+                    <select name="sexo" id="sexo">
+                        <option selected disabled>selecione</option>
+                        <option>Feminino</option>
+                        <option>Masculino</option>
+                    </select>
+                    <p class="preechimento_erro" id="erro-sexo"><img src="./assets/icone_erro.png" alt="Ícone de Erro">Por favor, selecione um sexo</p>
+                </div>
+                <div class="formulario_secao_preenchimento">
+                    <label for="e-mail">E-mail</label>
+                    <input type="email" id="email" placeholder="usuario@email.com">
+                    <p class="preechimento_erro" id="erro-email"><img src="./assets/icone_erro.png" alt="Ícone de Erro">Por favor, insira um endereço de e-mail válido</p>
+                </div>
+                <div class="formulario_secao_preenchimento">
+                    <label for="telefone">Telefone</label>
+                    <input type="text" id="telefone" placeholder="(00) 00000-0000">
+                    <p class="preechimento_erro" id="erro-telefone"><img src="./assets/icone_erro.png" alt="Ícone de Erro">Por favor, insira um número de telefone válido</p>
+                </div>
+                <div class="formulario_secao_preenchimento">
+                    <label>Documento de identidade</label>
+                    <label for="rg" class="enviar_arquivo">
+                        <input type="file" id="rg" accept=".pdf">
+                        <div class="enviar_arquivo_selecionar" id="selecionar-rg">
+                            <img src="./assets/icone_upload.png" alt="Ícone de upload" width="48px">
+                            <p>Clique aqui para selecionar um arquivo</p> <br>
+                            <p>(somente um arquivo em PDF de no máximo 5MB)</p>
+                        </div>
+                        <div class="enviar_arquivo_selecionado" id="selecionado-rg">
+                            <img src="./assets/icone_anexo.png" width="48px" alt="Ícone de anexo carregado">
+                            <p>Arquivo anexado:</p>
+                            <p class="nome_de_arquivo" id="nome-do-arquivo-rg"></p><br>
+                            <p>Clique para substituir o arquivo</p>
+                        </div>
+                    </label>
+                    <p class="preechimento_erro" id="erro-rg"><img src="./assets/icone_erro.png" alt="Ícone de Erro">Por favor, anaxe um documento de identificação</p>
+                </div>
+            </section>
+            <section class="formulario_secao">
+                <p class="formulario_secao_titulo">Endereço residencial</p>
+                <div class="formulario_secao_preenchimento"> 
+                    <label for="cep">CEP</label>
+                    <input name="cep" type="text" id="cep" placeholder="00000-000"> 
+                    <p class="preechimento_erro" id="erro-cep"><img src="./assets/icone_erro.png" alt="Ícone de Erro">Por favor, insira um CEP válido</p>
+                </div>
+                <div class="formulario_secao_preenchimento_endereco">
+                    <div class="preenchimento_endereco_maior">
+                        <label for="rua">Rua</label>
+                        <input nome="rua" type="text" id="rua" placeholder="Ex.: Rua, Avenida, Apto, ...">
+                        <p class="preechimento_erro" id="erro-rua"><img src="./assets/icone_erro.png" alt="Ícone de Erro">Por favor, insira um nome de rua válido</p>
+                    </div>
+                    <div class="preenchimento_endereco_menor">
+                        <label for="numero">Número</label>
+                        <input name="numero" type="text" id="numero" placeholder="Ex.: Nº15"> 
+                        <p class="preechimento_erro" id="erro-numero"><img src="./assets/icone_erro.png" alt="Ícone de Erro">Por favor, insira um número de residência válido!</p>
+                    </div>
+                </div>
+                <div class="formulario_secao_preenchimento_endereco">
+                    <div class="preenchimento_endereco_maior">
+                        <label for="cidade">Cidade</label>
+                        <input type="text" name="Cidade" id="cidade" placeholder="Ex.:São Luís">
+                        <p class="preechimento_erro" id="erro-cidade"><img src="./assets/icone_erro.png" alt="Ícone de Erro">Por favor, insira o nome de uma cidade válido</p>
+                    </div>
+                    <div class="preenchimento_endereco_menor">
+                        <label for="estado">Estado</label>
+                        <select name="estado" id="estado">
+                            <option selected disabled>selecione</option>
+                            <option value="AC">Acre</option>
+                            <option value="AL">Alagoas</option>
+                            <option value="AP">Amapá</option>
+                            <option value="AM">Amazonas</option>
+                            <option value="BA">Bahia</option>
+                            <option value="CE">Ceará</option>
+                            <option value="DF">Distrito Federal</option>
+                            <option value="ES">Espírito Santo</option>
+                            <option value="GO">Goiás</option>
+                            <option value="MA">Maranhão</option>
+                            <option value="MT">Mato Grosso</option>
+                            <option value="MS">Mato Grosso do Sul</option>
+                            <option value="MG">Minas Gerais</option>
+                            <option value="PA">Pará</option>
+                            <option value="PB">Paraíba</option>
+                            <option value="PR">Paraná</option>
+                            <option value="PE">Pernambuco</option>
+                            <option value="PI">Piauí</option>
+                            <option value="RJ">Rio de Janeiro</option>
+                            <option value="RN">Rio Grande do Norte</option>
+                            <option value="RS">Rio Grande do Sul</option>
+                            <option value="RO">Rondônia</option>
+                            <option value="RR">Roraima</option>
+                            <option value="SC">Santa Catarina</option>
+                            <option value="SP">São Paulo</option>
+                            <option value="SE">Sergipe</option>
+                            <option value="TO">Tocantins</option>
+                        </select>
+                        <p class="preechimento_erro" id="erro-estado"><img src="./assets/icone_erro.png" alt="Ícone de Erro">Por favor, selecione um estado</p>
+                    </div>
+                </div>
+                <div class="formulario_secao_preenchimento">
+                    <label>Comprovante de residência</label>
+                    <label for="comprovante-residencia" class="enviar_arquivo">
+                        <input type="file" id="comprovante-residencia" accept=".pdf">
+                        <div class="enviar_arquivo_selecionar" id="selecionar-comprovante-residencia" >
+                            <img src="./assets/icone_upload.png" alt="Icone de upload" width="48px">
+                            <p>Clique aqui para selecionar um arquivo</p> <br>
+                            <p>(somente um arquivo em PDF de no máximo 5MB)</p>
+                        </div>
+                        <div class="enviar_arquivo_selecionado" id="selecionado-comprovante-residencia">
+                            <img src="./assets/icone_anexo.png" width="48px" alt="Ícone anexo carregado">
+                            <p>Arquivo anexado:</p>
+                            <p class="nome_de_arquivo" id="nome-do-arquivo-comprovante-residencia"></p> <br>
+                            <p>Clique para substituir o arquivo</p>
+                        </div>
+                    </label>
+                    <p class="preechimento_erro" id="erro-comprovante-residencia"><img src="./assets/icone_erro.png" alt="Ícone de Erro">Por favor, anexe um comprovante de residência</p>
+                </div> 
+            </section>
+            <section class="formulario_secao">
+                <p class="formulario_secao_titulo">Trilhas de apredizagem</p>
+                <div class="menu_selecao_trilhas">
+                    <label>Selecione apenas uma trilha</label>
+                    <div>
+                        <div class="selecao_trilhas">
+                            <label class="trilha">
+                                <input type="radio" name="trilha" value="frontend">
+                                <div class="conteudo">
+                                    <img class="icone_marcador" src="./assets/icone_marcador.png" alt="Ícone marcadador"> 
+                                    <img class="icone_trilha" src="./assets/icone_frot_end.png" alt="Ícone de Front-end">
+                                    <p>Programação Front-end</p>
+                                </div>
+                            </label>
+                            <label class="trilha">
+                                <input type="radio" name="trilha" value="backend"> 
+                                <div class="conteudo">
+                                    <img class="icone_marcador" src="./assets/icone_marcador.png" alt="Ícone marcadador">
+                                    <img class="icone_trilha" src="./assets/icone_back_end.png" alt="Ícone de Back-end">
+                                    <p>Programação Back-end</p>
+                                </div>
+                            </label>
+                            <label class="trilha">
+                                <input type="radio" name="trilha" value="jogos"> 
+                                <div class="conteudo">
+                                    <img class="icone_marcador" src="./assets/icone_marcador.png">
+                                    <img class="icone_trilha" src="./assets/icone_games.png" alt="Ícone de Programação de Jogos">
+                                    <p>Programação de Jogos</p>
+                                </div>
+                            </label>
+                            <label class="trilha">
+                                <input type="radio" name="trilha" value="ux"> 
+                                <div class="conteudo">
+                                    <img class="icone_marcador" src="./assets/icone_marcador.png">
+                                    <img class="icone_trilha" src="./assets/icone_ux.png" alt="Ícone de Design e Experiência">
+                                    <p>Design e Experiência</p>
+                                </div>
+                            </label><label class="trilha">
+                                <input type="radio" name="trilha" value="dados"> 
+                                <div class="conteudo">
+                                    <img class="icone_marcador" src="./assets/icone_marcador.png">
+                                    <img class="icone_trilha" src="./assets/icone_dados.png" alt="Ícone de Ciência de Dados">
+                                    <p>Ciência de Dados</p>
+                                </div>
+                            </label>
+                        </div>
+                        <p class="preechimento_erro" id="erro-trilha"><img src="./assets/icone_erro.png" alt="Ícone de Erro">Por favor, escolha uma trilha</p> 
+                    </div>
+                    
+                </div>
+            </section>
+            <section class="formulario_secao">
+                <div>
+                    <div class="termos_e_condicoes">
+                        <label for="termos-e-condicoes">Declaro que li e concordo com os <a class="link_termos" href="">Termos e Condições</a> e com a <a class="link_termos" href="">Política de Privacidade</a>.</label>
+                        <input name="aceite" type="checkbox" id="aceite">
+                    </div>
+                    <p class="preechimento_erro" id="erro-aceite"><img src="./assets/icone_erro.png" alt="Ícone de Erro">Por favor, aceite os Termos, Condições e Políticas para prosseguir</p> 
+                </div>
+                <div class="botoes_confimacao_inscricao">
+                    <button type="button" class="botao_cancelar" onclick="cancelar()">Cancelar</button>
+                    <button type="button" class="botao_inscricao" onclick="enviar()">Fazer inscrição</button>
+                </div>
+            </section>
+        </form>
+    </main>
+    <footer>
+        <p><b> Está com problemas ou dúvidas?</b></p>
+        <p>Entre em contato com o nosso suporte pelo e-mail: <strong>inovamaranhao@gmail.com</strong></p>
+    </footer>
+    <script src="./scripts/app.js"></script>
+</body>
+</html>
